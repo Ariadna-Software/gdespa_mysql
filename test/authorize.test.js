@@ -36,6 +36,7 @@ describe("Authorization", function () {
     });
     describe("Check API_KEY", function () {
         it("should check a correct api key", function(done){
+            console.log("APK: ", apk);
             auth.checkApiKey(apk,function(err, res){
                 expect(err).to.be.null;
                 expect(res).to.be.true;
