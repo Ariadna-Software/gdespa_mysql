@@ -11,7 +11,7 @@
 7 verbose unsafe-perm in lifecycle true
 8 info gdespa_mysql@1.0.0 Failed to exec commit script
 9 verbose stack Error: gdespa_mysql@1.0.0 commit: `git add -A && git cz && git push`
-9 verbose stack Exit status 1
+9 verbose stack Exit status 128
 9 verbose stack     at EventEmitter.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
 9 verbose stack     at EventEmitter.emit (events.js:110:17)
 9 verbose stack     at ChildProcess.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
@@ -26,7 +26,7 @@
 15 error npm  v2.11.3
 16 error code ELIFECYCLE
 17 error gdespa_mysql@1.0.0 commit: `git add -A && git cz && git push`
-17 error Exit status 1
+17 error Exit status 128
 18 error Failed at the gdespa_mysql@1.0.0 commit script 'git add -A && git cz && git push'.
 18 error This is most likely a problem with the gdespa_mysql package,
 18 error not with npm itself.
