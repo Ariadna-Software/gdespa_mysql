@@ -20,7 +20,6 @@ describe("Authorization", function () {
                 expect(res.user).not.to.be.null;
                 expect(res.api_key).not.to.be.null;
                 apk = res.api_key;
-                console.log("RES1: ", res);
                 done();
             }, true);
         });
@@ -37,7 +36,6 @@ describe("Authorization", function () {
     });
     describe("Check API_KEY", function () {
         it("should check a correct api key", function(done){
-            console.log("APK: ", apk);
             auth.checkApiKey(apk,function(err, res){
                 expect(err).to.be.null;
                 expect(res).to.be.true;
