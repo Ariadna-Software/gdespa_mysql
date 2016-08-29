@@ -110,5 +110,5 @@ describe("User", function () {
             expect(err).to.be.null;
             done();
         }, true);
-    })
+    });
 });

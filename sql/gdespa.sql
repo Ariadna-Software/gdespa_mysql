@@ -2,8 +2,7 @@
 SQLyog Community v12.2.4 (64 bit)
 MySQL - 5.6.16 : Database - gdespa
 *********************************************************************
-*/
-
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -14,6 +13,21 @@ MySQL - 5.6.16 : Database - gdespa
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 USE `gdespa`;
+
+/*Table structure for table `api_key` */
+
+DROP TABLE IF EXISTS `api_key`;
+
+CREATE TABLE `api_key` (
+  `apiKeyId` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` int(11) DEFAULT NULL,
+  `getDateTime` datetime DEFAULT NULL,
+  `expireDateTime` datetime DEFAULT NULL,
+  `apiKey` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`apiKeyId`),
+  KEY `ref_apikey_user` (`userId`),
+  CONSTRAINT `ref_apikey_user` FOREIGN KEY (`userId`) REFERENCES `gdespa_test`.`user` (`userId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Table structure for table `user` */
 
@@ -30,8 +44,6 @@ CREATE TABLE `user` (
   CONSTRAINT `rf_user_userGroup` FOREIGN KEY (`userGroupId`) REFERENCES `user_group` (`userGroupId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
 
-/*Data for the table `user` */
-
 /*Table structure for table `user_group` */
 
 DROP TABLE IF EXISTS `user_group`;
@@ -41,8 +53,6 @@ CREATE TABLE `user_group` (
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`userGroupId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=151 DEFAULT CHARSET=utf8;
-
-/*Data for the table `user_group` */
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
