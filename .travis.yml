@@ -16,7 +16,7 @@ node_js:
 services:
   - mysql  
 before_install:
-  - mysql -e "create database IF NOT EXISTS baseapi_test;" -uroot
+  - mysql -e "create database IF NOT EXISTS gdespa_test;" -uroot
   - npm i -g npm@^2.0.0
 before_script:
   - npm prune

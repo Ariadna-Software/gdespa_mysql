@@ -3,14 +3,14 @@
         "host": "localhost",
         "user": "root",
         "password": "aritel",
-        "database": "baseapi",
+        "database": "gdespa",
         "port": 3306
     },
     "test": {
         "host": "localhost",
         "user": "travis",
         "password": "",
-        "database": "baseapi_test",
+        "database": "gdespa_test",
         "port": 3306
     }
 }
