@@ -26,8 +26,8 @@ CREATE TABLE `api_key` (
   `apiKey` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`apiKeyId`),
   KEY `ref_apikey_user` (`userId`),
-  CONSTRAINT `ref_apikey_user` FOREIGN KEY (`userId`) REFERENCES `gdespa_test`.`user` (`userId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `ref_apikey_user` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 
 /*Table structure for table `user` */
 
@@ -39,6 +39,7 @@ CREATE TABLE `user` (
   `userGroupId` int(11) NOT NULL,
   `login` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `lang` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`userId`),
   KEY `rf_user_userGroup` (`userGroupId`),
   CONSTRAINT `rf_user_userGroup` FOREIGN KEY (`userGroupId`) REFERENCES `user_group` (`userGroupId`)

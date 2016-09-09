@@ -24,6 +24,7 @@ describe("User", function () {
             name: "TestUser",
             login: "login",
             password: "password",
+            lang: "en",
             userGroup: {
                 id: 2,
                 name: "TestUserGroup"
@@ -47,6 +48,7 @@ describe("User", function () {
                 name: "TestUser",
                 login: "login",
                 password: "password",
+                lang: "en",
                 userGroup: {
                     id: 2,
                     name: "TestUserGroup"
@@ -62,6 +64,7 @@ describe("User", function () {
             name: "TestUserChanged",
             login: "login",
             password: "password",
+            lang: "en",
             userGroup: {
                 id: 2,
                 name: "TestUserGroup"
@@ -73,6 +76,7 @@ describe("User", function () {
                 name: "TestUserChanged",
                 login: "login",
                 password: "password",
+                lang: "en",
                 userGroup: {
                     id: 2,
                     name: "TestUserGroup"
